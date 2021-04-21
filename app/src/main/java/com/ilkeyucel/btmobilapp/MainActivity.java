@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 System.out.println("login here");
-                Intent intent = new Intent(v.getContext(), SignUpActivity.class);
+                Intent intent = new Intent(v.getContext(), ListActivity.class);
                 v.getContext().startActivity(intent);
             }
         });

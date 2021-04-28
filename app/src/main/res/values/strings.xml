@@ -3,4 +3,6 @@
     <string name="gotoButton">Go detail button git</string>
     <string name="textview">TextView</string>
     <string name="git_test">Git test</string>
+    <string name="examDur">Sınav Süresi</string>
+    <string name="questionPoi">Soru Puanı</string>
 </resources>

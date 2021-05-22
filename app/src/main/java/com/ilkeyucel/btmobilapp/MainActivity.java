@@ -12,6 +12,9 @@ import android.widget.Toast;
 
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
     Button signin;
@@ -39,11 +42,12 @@ public class MainActivity extends AppCompatActivity {
                 v.getContext().startActivity(intent);
             } else {
                 passwordCount +=1;
-                if(passwordCount >= 3){
+                Toast.makeText(MainActivity.activity, "Hatalı giriş yaptınız.", Toast.LENGTH_SHORT).show();
+                if(passwordCount == 3){
                     System.out.println("no person show false alert");
                     new MaterialAlertDialogBuilder(activity)
                             .setTitle("Hata")
-                            .setMessage("3 kere hatalı giriş yaptınız")
+                            .setMessage("3 kere hatalı giriş yaptınız, uygulama kapatılacaktır.")
                             .setCancelable(true)
                             .setPositiveButton("Tamam", (dialog, which) -> activity.finish())
                             .show();
@@ -63,8 +67,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private boolean checkPerson(){
-        for (PersonInfo person : PersonInfo.getPersonList()){
-            if (userName.getText().toString().equals(person.getUserName()) && password.getText().toString().equals(person.getPassword()))
+        List<PersonInfo> persons = SharedPrefHelper.getPersonsList();
+        if (persons == null) {
+           return false;
+        }
+
+        for (PersonInfo person : persons){
+            if (userName.getText().toString().equals(person.getEmail()) && password.getText().toString().equals(person.getPassword()))
                 return true;
         }
         return false;

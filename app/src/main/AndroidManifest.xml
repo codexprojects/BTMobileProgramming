@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BTMobile">
-        <activity android:name=".SignUpActivity"></activity>
+        <activity android:name=".ExamActivity"></activity>
+        <activity android:name=".QuestionListActivity" />
+        <activity android:name=".QuestionAddActivity" />
+        <activity android:name=".SettingsActivity" />
+        <activity android:name=".ListActivity" />
+        <activity android:name=".SignUpActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

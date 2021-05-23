@@ -6,8 +6,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.slider.RangeSlider;
 import com.ilkeyucel.btmobilapp.model.Answer;
 import com.ilkeyucel.btmobilapp.model.PersonInfo;
@@ -37,6 +39,8 @@ public class QuestionAddActivity extends AppCompatActivity {
     Answer answer2;
     Answer answer3;
     Answer answer4;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,7 +75,12 @@ public class QuestionAddActivity extends AppCompatActivity {
                 questions.add(questionItem);
 
                 SharedPrefHelper.putQuestionList(questions);
-
+                new MaterialAlertDialogBuilder(QuestionAddActivity.this)
+                        .setTitle("Tebrikler")
+                        .setMessage("Soru başarıyla eklendi, menü'ye dönmek için Tamam'a basın.")
+                        .setCancelable(true)
+                        .setPositiveButton("Tamam", (dialog, which) -> QuestionAddActivity.this.onBackPressed())
+                        .show();
             }
         });
 

@@ -4,16 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class ListActivity extends AppCompatActivity {
+public class QuestionListActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list);
-
-        System.out.println("welcome to list menu");
+        setContentView(R.layout.activity_question_list);
     }
-
-
-
 }

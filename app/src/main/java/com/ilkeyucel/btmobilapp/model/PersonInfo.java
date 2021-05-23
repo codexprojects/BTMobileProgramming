@@ -1,4 +1,4 @@
-package com.ilkeyucel.btmobilapp;
+package com.ilkeyucel.btmobilapp.model;
 
 import android.app.Person;
 

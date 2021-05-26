@@ -3,7 +3,7 @@
     <string name="gotoButton">Giriş Yap</string>
     <string name="textview">TextView</string>
     <string name="git_test">Git test</string>
-    <string name="examDur">Sınav Süresi</string>
+    <string name="examDur">Sınav Zorluk Seviyesi</string>
     <string name="questionPoi">Soru Puanı</string>
     <string name="username">Kullanıcı Adı</string>
     <string name="password">Şifre</string>

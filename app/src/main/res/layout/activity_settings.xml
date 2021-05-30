@@ -37,5 +37,31 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/questionPoi" />
+
+        <EditText
+            android:id="@+id/pointText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sınav Süresi" />
+
+        <EditText
+            android:id="@+id/durationText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/saveSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kaydet" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
